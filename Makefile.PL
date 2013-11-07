@@ -59,9 +59,6 @@ $(INST_BIN)/a2p$(EXE_EXT): $(OBJ) a2p$(OBJ_EXT)
 	$(CC) -o $(INST_BIN)/a2p $(LDFLAGS) $(OBJ) a2p$(OBJ_EXT) $(LIB)
 
 pure_all :: $(INST_BIN)/a2p$(EXE_EXT)
-
-a2p.c: a2p.y
-	-@sh -c true
 END
 
 }

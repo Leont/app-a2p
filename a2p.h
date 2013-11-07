@@ -128,8 +128,6 @@ char *strcpy(), *strcat();
 #  define PERL_EXPORT_C extern
 #endif
 
-#define EXTERN_C PERL_EXPORT_C
-
 #  include "handy.h"
 
 #define Nullop 0

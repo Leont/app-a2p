@@ -10,6 +10,9 @@
 #include "EXTERN.h"
 #include "a2p.h"
 #include "util.h"
+#ifndef isALPHANUMERIC
+#define isALPHANUMERIC isALNUMC
+#endif
 
 bool exitval = FALSE;
 bool realexit = FALSE;

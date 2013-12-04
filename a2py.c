@@ -7,15 +7,18 @@
  *    License or the Artistic License, as specified in the README file.
  */
 
-#if defined(OS2) || defined(WIN32) || defined(NETWARE)
 #if defined(WIN32)
 #include <io.h>
 #endif
 #include "patchlevel.h"
-#endif
 #include "util.h"
+
+#if PERL_VERSION > 17
 #include "unicode_constants.h"
 #define DELETE_CHAR DEL_NATIVE
+#else
+#define DELETE_CHAR 127
+#endif
 
 const char *filename;
 const char *myname;

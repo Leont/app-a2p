@@ -3,6 +3,7 @@ Revision history for App-a2p
 {{$NEXT}}
           Make a2p compile on 5.16 and lower again
           Manify to section 1
+          Add one sanity test
 
 1.000     2013-12-04 00:39:41 Europe/Amsterdam
           Released a2p as in blead circa 5.19.6

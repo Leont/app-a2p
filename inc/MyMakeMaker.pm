@@ -9,6 +9,10 @@ override _build_WriteMakefile_args => sub { +{
 	%{ super() },
 	NEEDS_LINKING => 1,
 	C => [],
+	MAN1PODS => {
+		'lib/App/a2p.pm' => 'blib/man1/a2p.1',
+	},
+	MAN3PODS => {},
 } };
 
 override _build_MakeFile_PL_template => sub {
@@ -28,7 +32,7 @@ sub postamble {
 OBJ = hash$(OBJ_EXT) str$(OBJ_EXT) util$(OBJ_EXT) walk$(OBJ_EXT)
 
 $(INST_BIN)/a2p$(EXE_EXT): $(OBJ) a2p$(OBJ_EXT)
-	$(CC) -o $(INST_BIN)/a2p $(LDFLAGS) $(OBJ) a2p$(OBJ_EXT) $(LIB)
+	$(CC) -o $(INST_BIN)/a2p$(EXE_EXT) $(LDFLAGS) $(OBJ) a2p$(OBJ_EXT) $(LIB)
 
 pure_all :: $(INST_BIN)/a2p$(EXE_EXT)
 END

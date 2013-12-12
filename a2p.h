@@ -130,6 +130,10 @@ char *strcpy(), *strcat();
 
 #  include "handy.h"
 
+#ifndef isWORDCHAR
+#defined isWORDCHAR(c) isALNUM(c)
+#endif
+
 #define Nullop 0
 
 #define OPROG		1

@@ -9,14 +9,14 @@ use Config;
 use IPC::Open2;
 use File::Spec::Functions 'catfile';
 
-my $awk_path = catfile(qw{blib bin}, "a2p$Config{exe_ext}");
+my $a2p_path = catfile(qw{blib bin}, "a2p$Config{exe_ext}");
 
 sub runa2p {
 	my %args = @_;
-	my @args = $awk_path;
+	my @args = $a2p_path;
 	push @args, @{ $args{args} } if $args{args};
 	push @args, $args{progfile} if $args{progfile};
-	my $pid = open2(my ($in, $out), @args);
+	my $pid = open2(my ($in, $out), @args) or die "Couldn't open2($?): $!";
 	print $out $args{input} if defined $args{input};
 	close $out;
 	binmode $in, ':crlf' if $^O eq 'MSWin32';

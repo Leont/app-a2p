@@ -2,6 +2,7 @@ Revision history for App-a2p
 
 {{$NEXT}}
           Support isWORDCHAR on <5.14
+          Give clearer errors on open2 failure
 
 1.001     2013-12-05 13:53:53 Europe/Amsterdam
           Make a2p compile on 5.16 and lower again

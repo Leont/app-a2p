@@ -1,6 +1,8 @@
 Revision history for App-a2p
 
 {{$NEXT}}
+
+1.003     2013-12-13 12:25:56 Europe/Amsterdam
           Fix type in 5.12 compatibility code
 
 1.002     2013-12-13 00:59:38 Europe/Amsterdam

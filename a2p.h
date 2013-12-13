@@ -131,7 +131,7 @@ char *strcpy(), *strcat();
 #  include "handy.h"
 
 #ifndef isWORDCHAR
-#defined isWORDCHAR(c) isALNUM(c)
+#define isWORDCHAR(c) isALNUM(c)
 #endif
 
 #define Nullop 0

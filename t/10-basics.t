@@ -10,6 +10,8 @@ use IPC::Open2;
 use File::Spec::Functions 'catfile';
 use Devel::FindPerl 'find_perl_interpreter';
 
+alarm 5;
+
 my $program = runa2p(progfile => '-', input => "/awk2perl/\n");
 like($program, qr{print \$_ if /awk2perl/;}, 'Output looks like expected output');
 

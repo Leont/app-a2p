@@ -1,6 +1,7 @@
 Revision history for App-a2p
 
 {{$NEXT}}
+          Run generated perl code and compare with expected
           Fix double definition of coeff
 
 1.003     2013-12-13 12:25:56 Europe/Amsterdam

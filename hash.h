@@ -9,8 +9,6 @@
 
 #define FILLPCT 60		/* don't make greater than 99 */
 
-EXTERN_C const char coeff[128];
-
 typedef struct hentry HENT;
 
 struct hentry {

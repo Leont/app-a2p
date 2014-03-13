@@ -2,6 +2,7 @@ Revision history for App-a2p
 
 {{$NEXT}}
           Use tempfiles instead of pipes for portability in tests
+          Add a makefile snipplet for MSVC
 
 1.005     2013-12-15 22:34:51 Europe/Amsterdam
           Fix prereqs

@@ -1,6 +1,8 @@
 Revision history for App-a2p
 
 {{$NEXT}}
+
+1.007     2014-05-29 16:35:56+02:00 Europe/Amsterdam
           Pointers set but then (immediately or very shortly) overwritten [Jarko Hietaniemi]
 
 1.006     2014-03-13 17:13:34CET+0100 Europe/Amsterdam

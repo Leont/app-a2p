@@ -29,7 +29,7 @@ sub postamble {
 		$self->SUPER::postamble,
 		'OBJ = hash$(OBJ_EXT) str$(OBJ_EXT) util$(OBJ_EXT) walk$(OBJ_EXT) a2p$(OBJ_EXT)',
 		'',
-		'$(INST_BIN)/a2p$(EXE_EXT): $(OBJ)'
+		$self->catfile('$(INST_BIN)', 'a2p$(EXE_EXT)') . ' : $(OBJ)'
 	);
 	if ($^O eq 'MSWin32' && $Config{cc} =~ /^cl/) {
 		push @ret, map { $_ eq '<<' ? $_ : "\t$_" }

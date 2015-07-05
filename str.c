@@ -69,7 +69,7 @@ str_nset(STR *str, const char *ptr, int len)
 void
 str_set(STR *str, const char *ptr)
 {
-    int len;
+    size_t len;
 
     if (!ptr)
 	ptr = "";

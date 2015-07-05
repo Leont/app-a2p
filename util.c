@@ -151,7 +151,7 @@ savestr(const char *str)
 /* grow a static string to at least a certain length */
 
 void
-growstr(char **strptr, int *curlen, int newlen)
+growstr(char **strptr, size_t *curlen, size_t newlen)
 {
     if (newlen > *curlen) {		/* need more room? */
 	if (*curlen)

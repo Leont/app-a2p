@@ -10,8 +10,8 @@
 struct string {
     char *	str_ptr;	/* pointer to malloced string */
     double	str_nval;	/* numeric value, if any */
-    int		str_len;	/* allocated size */
-    int		str_cur;	/* length of str_ptr as a C string */
+    size_t	str_len;	/* allocated size */
+    size_t	str_cur;	/* length of str_ptr as a C string */
     union {
 	STR *str_next;		/* while free, link to next free str */
     } str_link;

@@ -20,7 +20,7 @@
 
 char * cpy2 ( char *to, char *from, int delim );
 char * cpytill ( char *to, char *from, int delim );
-void growstr ( char **strptr, int *curlen, int newlen );
+void growstr ( char **strptr, size_t *curlen, size_t newlen );
 char * instr ( char *big, const char *little );
 char * savestr ( const char *str );
 void fatal ( const char *pat, ... );

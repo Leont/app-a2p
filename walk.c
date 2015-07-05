@@ -1533,7 +1533,7 @@ sub Pick {\n\
     *numericptr = numeric;
 #ifdef DEBUGGING
     if (debug & 4) {
-	printf("%3d %5d %15s %d %4d ",level,node,opname[type],len,str->str_cur);
+	printf("%3d %5d %15s %d %4lu ",level,node,opname[type],len,str->str_cur);
 	for (t = str->str_ptr; *t && t - str->str_ptr < 40; t++)
 	    if (*t == '\n')
 		printf("\\n");

@@ -25,11 +25,12 @@ use Config;
 
 sub postamble {
 	my $self = shift;
+	my $a2p = $self->catfile('$(INST_BIN)', 'a2p$(EXE_EXT)');
 	my @ret = (
 		$self->SUPER::postamble,
 		'OBJ = hash$(OBJ_EXT) str$(OBJ_EXT) util$(OBJ_EXT) walk$(OBJ_EXT) a2p$(OBJ_EXT)',
 		'',
-		$self->catfile('$(INST_BIN)', 'a2p$(EXE_EXT)') . ' : $(OBJ)'
+		"$a2p : \$(OBJ)"
 	);
 	if ($^O eq 'MSWin32' && $Config{cc} =~ /^cl/) {
 		push @ret, map { $_ eq '<<' ? $_ : "\t$_" }
@@ -40,9 +41,9 @@ sub postamble {
 		'if exist $@.manifest del $@.manifest';
 	}
 	else {
-		push @ret, "\t" . '$(CC) -o $(INST_BIN)/a2p$(EXE_EXT) $(LDFLAGS) $(OBJ) $(LIBS)';
+		push @ret, "\t" . '$(CC) -o $@ $(LDFLAGS) $(OBJ) $(LIBS)';
 	}
-	push @ret, '', 'pure_all :: $(INST_BIN)/a2p$(EXE_EXT)';
+	push @ret, '', "pure_all :: $a2p";
 	return join "\n", @ret;
 }
 TEMPLATE

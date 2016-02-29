@@ -1,6 +1,7 @@
 Revision history for App-a2p
 
 {{$NEXT}}
+          Fix buffer overflow [Vladimir Marek]
 
 1.009     2015-07-08 23:05:11+02:00 Europe/Amsterdam
           Generate path to a2p more portably

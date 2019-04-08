@@ -2,6 +2,7 @@ Revision history for App-a2p
 
 {{$NEXT}}
           Avoid using strcpy in undefined manner
+          Eliminate Devel::FindPerl dependency
 
 1.010     2018-01-27 19:18:18+01:00 Europe/Amsterdam
           Fix buffer overflow [Vladimir Marek]
